@@ -1,0 +1,259 @@
+>> Q1.
+joblist : 2
+numofqueue : 2
+quantom length : 3
+max job length : 10
+io : disabled
+
+OPTIONS allotments for queue  0 is   1
+OPTIONS quantum length for queue  0 is   3
+OPTIONS boost 0
+OPTIONS ioTime 0
+OPTIONS stayAfterIO False
+OPTIONS iobump False
+
+
+For each job, three defining characteristics are given:
+startTime : at what time does the job enter the system
+runTime   : the total CPU time needed by the job to finish
+ioFreq    : every ioFreq time units, the job issues an I/O
+(the I/O takes ioTime units to complete)
+
+	Job List:
+	Job  0: startTime   0 - runTime   8 - ioFreq   0
+	Job  1: startTime   0 - runTime   4 - ioFreq   0
+
+
+	Execution Trace:
+
+	[ time 0 ] JOB BEGINS by JOB 0
+	[ time 0 ] JOB BEGINS by JOB 1
+	[ time 0 ] Run JOB 0 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 7 (of 8) ]
+	[ time 1 ] Run JOB 0 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 6 (of 8) ]
+	[ time 2 ] Run JOB 0 at PRIORITY 1 [ TICKS 0 ALLOT 1 TIME 5 (of 8) ]
+	[ time 3 ] Run JOB 1 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 3 (of 4) ]
+	[ time 4 ] Run JOB 1 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 2 (of 4) ]
+	[ time 5 ] Run JOB 1 at PRIORITY 1 [ TICKS 0 ALLOT 1 TIME 1 (of 4) ]
+	[ time 6 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 4 (of 8) ]
+	[ time 7 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 3 (of 8) ]
+	[ time 8 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 2 (of 8) ]
+	[ time 9 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 0 (of 4) ]
+	[ time 10 ] FINISHED JOB 1
+	[ time 10 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 1 (of 8) ]
+	[ time 11 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 0 (of 8) ]
+	[ time 12 ] FINISHED JOB 0
+
+	Final statistics:
+	Job  0: startTime   0 - response   0 - turnaround  12
+	Job  1: startTime   0 - response   3 - turnaround  10
+
+	Avg  1: startTime n/a - response 1.50 - turnaround 11.00
+
+
+>> Q2.
+@DESKTOP-A0DKAKE:~/os_2019_fall/ch8$ ./mlfq.py -j 2 -n 2 -q 3 -m 10 -M 0 -i 0 -c
+
+>> Q3.
+set numofqueue to 1
+
+-- result --
+@DESKTOP-A0DKAKE:~/os_2019_fall/ch8$ ./mlfq.py -j 2 -n 1 -q 3 -m 10 -M 0 -i 0 -c
+Here is the list of inputs:
+OPTIONS jobs 2
+OPTIONS queues 1
+OPTIONS allotments for queue  0 is   1
+OPTIONS quantum length for queue  0 is   3
+OPTIONS boost 0
+OPTIONS ioTime 0OPTIONS stayAfterIO False
+OPTIONS iobump False
+
+For each job, three defining characteristics are given:     
+startTime : at what time does the job enter the system    
+runTime   : the total CPU time needed by the job to finish
+ioFreq    : every ioFreq time units, the job issues an I/O              (the I/O takes ioTime units to complete)      
+
+Job List:
+Job  0: startTime   0 - runTime   8 - ioFreq   0
+Job  1: startTime   0 - runTime   4 - ioFreq   0
+
+
+Execution Trace:
+
+[ time 0 ] JOB BEGINS by JOB 0
+[ time 0 ] JOB BEGINS by JOB 1
+[ time 0 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 7 (of 8) ]
+[ time 1 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 6 (of 8) ]
+[ time 2 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 5 (of 8) ]
+[ time 3 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 3 (of 4) ]
+[ time 4 ] Run JOB 1 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 2 (of 4) ]
+[ time 5 ] Run JOB 1 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 1 (of 4) ]
+[ time 6 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 4 (of 8) ]
+[ time 7 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 3 (of 8) ]
+[ time 8 ] Run JOB 0 at PRIORITY 0 [ TICKS 0 ALLOT 1 TIME 2 (of 8) ]
+[ time 9 ] Run JOB 1 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 0 (of 4) ]
+[ time 10 ] FINISHED JOB 1
+[ time 10 ] Run JOB 0 at PRIORITY 0 [ TICKS 2 ALLOT 1 TIME 1 (of 8) ]
+[ time 11 ] Run JOB 0 at PRIORITY 0 [ TICKS 1 ALLOT 1 TIME 0 (of 8) ]
+[ time 12 ] FINISHED JOB 0
+
+Final statistics:
+Job  0: startTime   0 - response   0 - turnaround  12
+Job  1: startTime   0 - response   3 - turnaround  10
+
+Avg  1: startTime n/a - response 1.50 - turnaround 11.001
+
+>> Q4.
+
+-S flag를 붙이면 I/O interrupt가 들어와도 계속 실행된다.
+
+junhan@DESKTOP-A0DKAKE:~/os_2019_fall/ch8$ ./mlfq.py -j 2 -n 1 -q 5 -m 10 -M 3 -i 0 -S -c
+OPTIONS queues 1
+OPTIONS allotments for queue  0 is   1
+OPTIONS quantum length for queue  0 is   5
+OPTIONS boost 0
+OPTIONS ioTime 0
+OPTIONS stayAfterIO True
+OPTIONS iobump False
+
+
+For each job, three defining characteristics are given:
+startTime : at what time does the job enter the system
+runTime   : the total CPU time needed by the job to finish
+	ioFreq    : every ioFreq time units, the job issues an I/O
+(the I/O takes ioTime units to complete)
+
+	Job List:
+	Job  0: startTime   0 - runTime   8 - ioFreq   2
+	Job  1: startTime   0 - runTime   4 - ioFreq   1
+
+
+	Execution Trace:
+
+	[ time 0 ] JOB BEGINS by JOB 0
+	[ time 0 ] JOB BEGINS by JOB 1
+	[ time 0 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 7 (of 8) ]
+	[ time 1 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 6 (of 8) ]
+	[ time 2 ] IO_START by JOB 0
+	IO DONE
+	[ time 2 ] IO_DONE by JOB 0
+	[ time 2 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 3 (of 4) ]
+	[ time 3 ] IO_START by JOB 1
+	IO DONE
+	[ time 3 ] IO_DONE by JOB 1
+	[ time 3 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 5 (of 8) ]
+	[ time 4 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 4 (of 8) ]
+	[ time 5 ] IO_START by JOB 0
+	IO DONE
+	[ time 5 ] IO_DONE by JOB 0
+	[ time 5 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 2 (of 4) ]
+	[ time 6 ] IO_START by JOB 1
+	IO DONE
+	[ time 6 ] IO_DONE by JOB 1
+	[ time 6 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 3 (of 8) ]
+	[ time 7 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 2 (of 8) ]
+	[ time 8 ] IO_START by JOB 0
+	IO DONE
+	[ time 8 ] IO_DONE by JOB 0
+	[ time 8 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 1 (of 4) ]
+	[ time 9 ] IO_START by JOB 1
+	IO DONE
+	[ time 9 ] IO_DONE by JOB 1
+	[ time 9 ] Run JOB 0 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 1 (of 8) ]
+	[ time 10 ] Run JOB 0 at PRIORITY 0 [ TICKS 3 ALLOT 1 TIME 0 (of 8) ]
+	[ time 11 ] FINISHED JOB 0
+	[ time 11 ] Run JOB 1 at PRIORITY 0 [ TICKS 4 ALLOT 1 TIME 0 (of 4) ]
+	[ time 12 ] FINISHED JOB 1
+
+	Final statistics:
+	Job  0: startTime   0 - response   0 - turnaround  11
+	Job  1: startTime   0 - response   2 - turnaround  12
+
+	Avg  1: startTime n/a - response 1.00 - turnaround 11.50
+
+>> Q5.
+queue number : q이고, 작업이 끊임없이 계속 들어온다고 가정.
+5%의 CPU를 사용하려면 10 * 20 ms = 200ms 마다 한번씩은 boost option을 통해 CPU를 사용할 수 있어야 함.
+
+>> Q6.
+
+-I 플래그를 사용하면 priority boost 시 아래에 있던 스레드가 먼저 실행하는 효과를 본다. 미미한 차이로 장기 실행되는
+스레드의 turnaround time이 감소될 수 있다.
+
+ ./mlfq.py -j 4 -n 3 -q 3 -m 10 -M 0 -i 0 -B 10 -I -c >>result.txt
+
+
+Here is the list of inputs:
+OPTIONS jobs 4
+OPTIONS queues 3
+OPTIONS allotments for queue  2 is   1
+OPTIONS quantum length for queue  2 is   3
+OPTIONS allotments for queue  1 is   1
+OPTIONS quantum length for queue  1 is   3
+OPTIONS allotments for queue  0 is   1
+OPTIONS quantum length for queue  0 is   3
+OPTIONS boost 10
+OPTIONS ioTime 0
+OPTIONS stayAfterIO False
+OPTIONS iobump True
+
+
+For each job, three defining characteristics are given:
+  startTime : at what time does the job enter the system
+  runTime   : the total CPU time needed by the job to finish
+  ioFreq    : every ioFreq time units, the job issues an I/O
+              (the I/O takes ioTime units to complete)
+
+Job List:
+  Job  0: startTime   0 - runTime   8 - ioFreq   0
+  Job  1: startTime   0 - runTime   4 - ioFreq   0
+  Job  2: startTime   0 - runTime   5 - ioFreq   0
+  Job  3: startTime   0 - runTime   8 - ioFreq   0
+
+
+Execution Trace:
+
+[ time 0 ] JOB BEGINS by JOB 0
+[ time 0 ] JOB BEGINS by JOB 1
+[ time 0 ] JOB BEGINS by JOB 2
+[ time 0 ] JOB BEGINS by JOB 3
+[ time 0 ] Run JOB 0 at PRIORITY 2 [ TICKS 2 ALLOT 1 TIME 7 (of 8) ]
+[ time 1 ] Run JOB 0 at PRIORITY 2 [ TICKS 1 ALLOT 1 TIME 6 (of 8) ]
+[ time 2 ] Run JOB 0 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 5 (of 8) ]
+[ time 3 ] Run JOB 1 at PRIORITY 2 [ TICKS 2 ALLOT 1 TIME 3 (of 4) ]
+[ time 4 ] Run JOB 1 at PRIORITY 2 [ TICKS 1 ALLOT 1 TIME 2 (of 4) ]
+[ time 5 ] Run JOB 1 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 1 (of 4) ]
+[ time 6 ] Run JOB 2 at PRIORITY 2 [ TICKS 2 ALLOT 1 TIME 4 (of 5) ]
+[ time 7 ] Run JOB 2 at PRIORITY 2 [ TICKS 1 ALLOT 1 TIME 3 (of 5) ]
+[ time 8 ] Run JOB 2 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 2 (of 5) ]
+[ time 9 ] Run JOB 3 at PRIORITY 2 [ TICKS 2 ALLOT 1 TIME 7 (of 8) ]
+[ time 10 ] BOOST ( every 10 )
+[ time 10 ] Run JOB 3 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 6 (of 8) ]
+[ time 11 ] Run JOB 0 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 4 (of 8) ]
+[ time 12 ] Run JOB 1 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 0 (of 4) ]
+[ time 13 ] FINISHED JOB 1
+[ time 13 ] Run JOB 2 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 1 (of 5) ]
+[ time 14 ] Run JOB 3 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 5 (of 8) ]
+[ time 15 ] Run JOB 3 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 4 (of 8) ]
+[ time 16 ] Run JOB 3 at PRIORITY 1 [ TICKS 0 ALLOT 1 TIME 3 (of 8) ]
+[ time 17 ] Run JOB 0 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 3 (of 8) ]
+[ time 18 ] Run JOB 0 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 2 (of 8) ]
+[ time 19 ] Run JOB 0 at PRIORITY 1 [ TICKS 0 ALLOT 1 TIME 1 (of 8) ]
+[ time 20 ] BOOST ( every 10 )
+[ time 20 ] Run JOB 3 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 2 (of 8) ]
+[ time 21 ] Run JOB 0 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 0 (of 8) ]
+[ time 22 ] FINISHED JOB 0
+[ time 22 ] Run JOB 2 at PRIORITY 2 [ TICKS 0 ALLOT 1 TIME 0 (of 5) ]
+[ time 23 ] FINISHED JOB 2
+[ time 23 ] Run JOB 3 at PRIORITY 1 [ TICKS 2 ALLOT 1 TIME 1 (of 8) ]
+[ time 24 ] Run JOB 3 at PRIORITY 1 [ TICKS 1 ALLOT 1 TIME 0 (of 8) ]
+[ time 25 ] FINISHED JOB 3
+
+Final statistics:
+  Job  0: startTime   0 - response   0 - turnaround  22
+  Job  1: startTime   0 - response   3 - turnaround  13
+  Job  2: startTime   0 - response   6 - turnaround  23
+  Job  3: startTime   0 - response   9 - turnaround  25
+
+  Avg  3: startTime n/a - response 4.50 - turnaround 20.75
+
+

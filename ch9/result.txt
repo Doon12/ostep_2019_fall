@@ -1,0 +1,370 @@
+>> Q1.
+1-A)
+3 jobs, 1 random seed
+./lottery.py -j 3 -s 1 -c 
+
+ARG jlist 
+ARG jobs 3
+ARG maxlen 10
+ARG maxticket 100
+ARG quantum 1
+ARG seed 1
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 1, tickets = 84 )
+  Job 1 ( length = 7, tickets = 25 )
+  Job 2 ( length = 4, tickets = 44 )
+
+
+** Solutions **
+
+Random 651593 -> Winning ticket 119 (of 153) -> Run 2
+  Jobs:  (  job:0 timeleft:1 tix:84 )   (  job:1 timeleft:7 tix:25 )   (* job:2 timeleft:4 tix:44 )  
+Random 788724 -> Winning ticket 9 (of 153) -> Run 0
+  Jobs:  (* job:0 timeleft:1 tix:84 )   (  job:1 timeleft:7 tix:25 )   (  job:2 timeleft:3 tix:44 )  
+--> JOB 0 DONE at time 2
+Random 93859 -> Winning ticket 19 (of 69) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:7 tix:25 )   (  job:2 timeleft:3 tix:44 )  
+Random 28347 -> Winning ticket 57 (of 69) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:6 tix:25 )   (* job:2 timeleft:3 tix:44 )  
+Random 835765 -> Winning ticket 37 (of 69) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:6 tix:25 )   (* job:2 timeleft:2 tix:44 )  
+Random 432767 -> Winning ticket 68 (of 69) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:6 tix:25 )   (* job:2 timeleft:1 tix:44 )  
+--> JOB 2 DONE at time 6
+Random 762280 -> Winning ticket 5 (of 25) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:6 tix:25 )   (  job:2 timeleft:0 tix:--- )  
+Random 2106 -> Winning ticket 6 (of 25) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:5 tix:25 )   (  job:2 timeleft:0 tix:--- )  
+Random 445387 -> Winning ticket 12 (of 25) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:4 tix:25 )   (  job:2 timeleft:0 tix:--- )  
+Random 721540 -> Winning ticket 15 (of 25) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:3 tix:25 )   (  job:2 timeleft:0 tix:--- )  
+Random 228762 -> Winning ticket 12 (of 25) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:2 tix:25 )   (  job:2 timeleft:0 tix:--- )  
+Random 945271 -> Winning ticket 21 (of 25) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:1 tix:25 )   (  job:2 timeleft:0 tix:--- )  
+--> JOB 1 DONE at time 12
+
+1-B)
+3 jobs, 2 random seed
+./lottery.py -j 3 -s 2 -c 
+
+
+ARG jlist 
+ARG jobs 3
+ARG maxlen 10
+ARG maxticket 100
+ARG quantum 1
+ARG seed 2
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 9, tickets = 94 )
+  Job 1 ( length = 8, tickets = 73 )
+  Job 2 ( length = 6, tickets = 30 )
+
+
+** Solutions **
+
+Random 605944 -> Winning ticket 169 (of 197) -> Run 2
+  Jobs:  (  job:0 timeleft:9 tix:94 )   (  job:1 timeleft:8 tix:73 )   (* job:2 timeleft:6 tix:30 )  
+Random 606802 -> Winning ticket 42 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:9 tix:94 )   (  job:1 timeleft:8 tix:73 )   (  job:2 timeleft:5 tix:30 )  
+Random 581204 -> Winning ticket 54 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:8 tix:94 )   (  job:1 timeleft:8 tix:73 )   (  job:2 timeleft:5 tix:30 )  
+Random 158383 -> Winning ticket 192 (of 197) -> Run 2
+  Jobs:  (  job:0 timeleft:7 tix:94 )   (  job:1 timeleft:8 tix:73 )   (* job:2 timeleft:5 tix:30 )  
+Random 430670 -> Winning ticket 28 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:7 tix:94 )   (  job:1 timeleft:8 tix:73 )   (  job:2 timeleft:4 tix:30 )  
+Random 393532 -> Winning ticket 123 (of 197) -> Run 1
+  Jobs:  (  job:0 timeleft:6 tix:94 )   (* job:1 timeleft:8 tix:73 )   (  job:2 timeleft:4 tix:30 )  
+Random 723012 -> Winning ticket 22 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:6 tix:94 )   (  job:1 timeleft:7 tix:73 )   (  job:2 timeleft:4 tix:30 )  
+Random 994820 -> Winning ticket 167 (of 197) -> Run 2
+  Jobs:  (  job:0 timeleft:5 tix:94 )   (  job:1 timeleft:7 tix:73 )   (* job:2 timeleft:4 tix:30 )  
+Random 949396 -> Winning ticket 53 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:5 tix:94 )   (  job:1 timeleft:7 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+Random 544177 -> Winning ticket 63 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:4 tix:94 )   (  job:1 timeleft:7 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+Random 444854 -> Winning ticket 28 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:3 tix:94 )   (  job:1 timeleft:7 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+Random 268241 -> Winning ticket 124 (of 197) -> Run 1
+  Jobs:  (  job:0 timeleft:2 tix:94 )   (* job:1 timeleft:7 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+Random 35924 -> Winning ticket 70 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:2 tix:94 )   (  job:1 timeleft:6 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+Random 27444 -> Winning ticket 61 (of 197) -> Run 0
+  Jobs:  (* job:0 timeleft:1 tix:94 )   (  job:1 timeleft:6 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+--> JOB 0 DONE at time 14
+Random 464894 -> Winning ticket 55 (of 103) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:6 tix:73 )   (  job:2 timeleft:3 tix:30 )  
+Random 318465 -> Winning ticket 92 (of 103) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:5 tix:73 )   (* job:2 timeleft:3 tix:30 )  
+Random 380015 -> Winning ticket 48 (of 103) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:5 tix:73 )   (  job:2 timeleft:2 tix:30 )  
+Random 891790 -> Winning ticket 16 (of 103) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:4 tix:73 )   (  job:2 timeleft:2 tix:30 )  
+Random 525753 -> Winning ticket 41 (of 103) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:3 tix:73 )   (  job:2 timeleft:2 tix:30 )  
+Random 560510 -> Winning ticket 87 (of 103) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:2 tix:73 )   (* job:2 timeleft:2 tix:30 )  
+Random 236123 -> Winning ticket 47 (of 103) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:2 tix:73 )   (  job:2 timeleft:1 tix:30 )  
+Random 23858 -> Winning ticket 65 (of 103) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:1 tix:73 )   (  job:2 timeleft:1 tix:30 )  
+--> JOB 1 DONE at time 22
+Random 325143 -> Winning ticket 3 (of 30) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:1 tix:30 )  
+--> JOB 2 DONE at time 23
+
+1-C)
+3 jobs, 3 random seed
+./lottery.py -j 3 -s 3 -c 
+
+
+ARG jlist 
+ARG jobs 3
+ARG maxlen 10
+ARG maxticket 100
+ARG quantum 1
+ARG seed 3
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 2, tickets = 54 )
+  Job 1 ( length = 3, tickets = 60 )
+  Job 2 ( length = 6, tickets = 6 )
+
+
+** Solutions **
+
+Random 13168 -> Winning ticket 88 (of 120) -> Run 1
+  Jobs:  (  job:0 timeleft:2 tix:54 )   (* job:1 timeleft:3 tix:60 )   (  job:2 timeleft:6 tix:6 )  
+Random 837469 -> Winning ticket 109 (of 120) -> Run 1
+  Jobs:  (  job:0 timeleft:2 tix:54 )   (* job:1 timeleft:2 tix:60 )   (  job:2 timeleft:6 tix:6 )  
+Random 259354 -> Winning ticket 34 (of 120) -> Run 0
+  Jobs:  (* job:0 timeleft:2 tix:54 )   (  job:1 timeleft:1 tix:60 )   (  job:2 timeleft:6 tix:6 )  
+Random 234331 -> Winning ticket 91 (of 120) -> Run 1
+  Jobs:  (  job:0 timeleft:1 tix:54 )   (* job:1 timeleft:1 tix:60 )   (  job:2 timeleft:6 tix:6 )  
+--> JOB 1 DONE at time 4
+Random 995645 -> Winning ticket 5 (of 60) -> Run 0
+  Jobs:  (* job:0 timeleft:1 tix:54 )   (  job:1 timeleft:0 tix:--- )   (  job:2 timeleft:6 tix:6 )  
+--> JOB 0 DONE at time 5
+Random 470263 -> Winning ticket 1 (of 6) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:6 tix:6 )  
+Random 836462 -> Winning ticket 2 (of 6) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:5 tix:6 )  
+Random 476353 -> Winning ticket 1 (of 6) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:4 tix:6 )  
+Random 639068 -> Winning ticket 2 (of 6) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:3 tix:6 )  
+Random 150616 -> Winning ticket 4 (of 6) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:2 tix:6 )  
+Random 634861 -> Winning ticket 1 (of 6) -> Run 2
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (  job:1 timeleft:0 tix:--- )   (* job:2 timeleft:1 tix:6 )  
+--> JOB 2 DONE at time 11
+
+>> Q2.
+작업 1이 끝나기 전까지 작업 0이 실행되지 않는 것 같은 독점 현상이 나타난다.
+./lottery.py -l 10:1,10:100 -c
+
+ARG jlist 10:1,10:100
+ARG jobs 3
+ARG maxlen 10
+ARG maxticket 100
+ARG quantum 1
+ARG seed 0
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10, tickets = 1 )
+  Job 1 ( length = 10, tickets = 100 )
+
+
+** Solutions **
+
+Random 844422 -> Winning ticket 62 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:10 tix:100 )  
+Random 757955 -> Winning ticket 51 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:9 tix:100 )  
+Random 420572 -> Winning ticket 8 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:8 tix:100 )  
+Random 258917 -> Winning ticket 54 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:7 tix:100 )  
+Random 511275 -> Winning ticket 13 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:6 tix:100 )  
+Random 404934 -> Winning ticket 25 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:5 tix:100 )  
+Random 783799 -> Winning ticket 39 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:4 tix:100 )  
+Random 303313 -> Winning ticket 10 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:3 tix:100 )  
+Random 476597 -> Winning ticket 79 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:2 tix:100 )  
+Random 583382 -> Winning ticket 6 (of 101) -> Run 1
+  Jobs:  (  job:0 timeleft:10 tix:1 )   (* job:1 timeleft:1 tix:100 )  
+--> JOB 1 DONE at time 10
+Random 908113 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:10 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 504687 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:9 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 281838 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:8 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 755804 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:7 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 618369 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:6 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 250506 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:5 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 909747 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:4 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 982786 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:3 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 810218 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:2 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+Random 902166 -> Winning ticket 0 (of 1) -> Run 0
+  Jobs:  (* job:0 timeleft:1 tix:1 )   (  job:1 timeleft:0 tix:--- )  
+--> JOB 0 DONE at time 20
+
+작업 0은 작업 1이 종료되기 전에 1/100의 확률로 실행된다.
+추첨 스케줄링의 특징은 cornercase 없는 fairness의 보장이다.
+실제 job length에 비해 ticket의 비율이 극도로 차이나는 경우 randomness가 보장되지 않아서
+fairness를 보장할 수 없다.
+
+>> Q3.
+seed에 따라 fairness가 크게 달라지는 것을 확인할 수 있었다.
+
+3-A) seed = 7
+./lottery.py -l 10:100,10:100 -s 7 -c
+
+ARG jlist 10:100,10:100
+ARG jobs 3
+ARG maxlen 10
+ARG maxticket 100
+ARG quantum 1
+ARG seed 7
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10, tickets = 100 )
+  Job 1 ( length = 10, tickets = 100 )
+
+
+** Solutions **
+
+Random 323833 -> Winning ticket 33 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:10 tix:100 )   (  job:1 timeleft:10 tix:100 )  
+Random 150849 -> Winning ticket 49 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:9 tix:100 )   (  job:1 timeleft:10 tix:100 )  
+Random 650935 -> Winning ticket 135 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:8 tix:100 )   (* job:1 timeleft:10 tix:100 )  
+Random 72436 -> Winning ticket 36 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:8 tix:100 )   (  job:1 timeleft:9 tix:100 )  
+Random 535882 -> Winning ticket 82 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:7 tix:100 )   (  job:1 timeleft:9 tix:100 )  
+Random 365689 -> Winning ticket 89 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:6 tix:100 )   (  job:1 timeleft:9 tix:100 )  
+Random 57998 -> Winning ticket 198 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:5 tix:100 )   (* job:1 timeleft:9 tix:100 )  
+Random 507436 -> Winning ticket 36 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:5 tix:100 )   (  job:1 timeleft:8 tix:100 )  
+Random 37495 -> Winning ticket 95 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:4 tix:100 )   (  job:1 timeleft:8 tix:100 )  
+Random 433646 -> Winning ticket 46 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:3 tix:100 )   (  job:1 timeleft:8 tix:100 )  
+Random 69855 -> Winning ticket 55 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:2 tix:100 )   (  job:1 timeleft:8 tix:100 )  
+Random 90713 -> Winning ticket 113 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:1 tix:100 )   (* job:1 timeleft:8 tix:100 )  
+Random 424519 -> Winning ticket 119 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:1 tix:100 )   (* job:1 timeleft:7 tix:100 )  
+Random 826852 -> Winning ticket 52 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:1 tix:100 )   (  job:1 timeleft:6 tix:100 )  
+--> JOB 0 DONE at time 14
+Random 123802 -> Winning ticket 2 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:6 tix:100 )  
+Random 223239 -> Winning ticket 39 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:5 tix:100 )  
+Random 627433 -> Winning ticket 33 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:4 tix:100 )  
+Random 947709 -> Winning ticket 9 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:3 tix:100 )  
+Random 577103 -> Winning ticket 3 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:2 tix:100 )  
+Random 396680 -> Winning ticket 80 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:1 tix:100 )  
+--> JOB 1 DONE at time 20
+
+
+3-B) seed = 15
+./lottery.py -l 10:100,10:100 -s 15 -c
+
+
+ARG jlist 10:100,10:100
+ARG jobs 3
+ARG maxlen 10
+ARG maxticket 100
+ARG quantum 1
+ARG seed 15
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10, tickets = 100 )
+  Job 1 ( length = 10, tickets = 100 )
+
+
+** Solutions **
+
+Random 965243 -> Winning ticket 43 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:10 tix:100 )   (  job:1 timeleft:10 tix:100 )  
+Random 11654 -> Winning ticket 54 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:9 tix:100 )   (  job:1 timeleft:10 tix:100 )  
+Random 735992 -> Winning ticket 192 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:8 tix:100 )   (* job:1 timeleft:10 tix:100 )  
+Random 158012 -> Winning ticket 12 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:8 tix:100 )   (  job:1 timeleft:9 tix:100 )  
+Random 986340 -> Winning ticket 140 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:7 tix:100 )   (* job:1 timeleft:9 tix:100 )  
+Random 16880 -> Winning ticket 80 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:7 tix:100 )   (  job:1 timeleft:8 tix:100 )  
+Random 879492 -> Winning ticket 92 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:6 tix:100 )   (  job:1 timeleft:8 tix:100 )  
+Random 681351 -> Winning ticket 151 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:5 tix:100 )   (* job:1 timeleft:8 tix:100 )  
+Random 857343 -> Winning ticket 143 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:5 tix:100 )   (* job:1 timeleft:7 tix:100 )  
+Random 999817 -> Winning ticket 17 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:5 tix:100 )   (  job:1 timeleft:6 tix:100 )  
+Random 239715 -> Winning ticket 115 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:4 tix:100 )   (* job:1 timeleft:6 tix:100 )  
+Random 338078 -> Winning ticket 78 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:4 tix:100 )   (  job:1 timeleft:5 tix:100 )  
+Random 708195 -> Winning ticket 195 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:3 tix:100 )   (* job:1 timeleft:5 tix:100 )  
+Random 280581 -> Winning ticket 181 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:3 tix:100 )   (* job:1 timeleft:4 tix:100 )  
+Random 263314 -> Winning ticket 114 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:3 tix:100 )   (* job:1 timeleft:3 tix:100 )  
+Random 228609 -> Winning ticket 9 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:3 tix:100 )   (  job:1 timeleft:2 tix:100 )  
+Random 857837 -> Winning ticket 37 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:2 tix:100 )   (  job:1 timeleft:2 tix:100 )  
+Random 874533 -> Winning ticket 133 (of 200) -> Run 1
+  Jobs:  (  job:0 timeleft:1 tix:100 )   (* job:1 timeleft:2 tix:100 )  
+Random 797616 -> Winning ticket 16 (of 200) -> Run 0
+  Jobs:  (* job:0 timeleft:1 tix:100 )   (  job:1 timeleft:1 tix:100 )  
+--> JOB 0 DONE at time 19
+Random 223391 -> Winning ticket 91 (of 100) -> Run 1
+  Jobs:  (  job:0 timeleft:0 tix:--- )   (* job:1 timeleft:1 tix:100 )  
+--> JOB 1 DONE at time 20
+
+>> Q4.
+quantum size가 커질수록 random을 실행할 횟수가 적어져서 unfairness가 증가한다.
+
+>> Q5.
+명령어
+1.
+i=1; while [ "$i" -lt 1001 ]; do  ./lottery.py -q 1 -l $i:100,$i:100 -s 15 -c; 
+((i++)); done
+2.
+python drawChart.py
+코드 수정 내용
+lottery.py가 'joblength\tfairness\n'를 fairness.txt에 쓰도록 수정.
+drawChart.py가 matplotlib을 이용하여 그래프를 그림
+결과
+0.5로 시작하여 1로 수렴하는 것을 볼 수 있음.
